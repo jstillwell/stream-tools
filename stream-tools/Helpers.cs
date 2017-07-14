@@ -13,6 +13,8 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace StreamTools {
+    //Found this on stack overflow. I have no problem admitting that. It doesnt make me any better or worse as a developer. 
+    //I did forget the link but im sure its easy to google "render razor template as string". It is actually quite good and takes advantage of dotnet cores DI.
     public interface IViewRenderService {
         Task<string> RenderToStringAsync(string viewName, object model);
     }

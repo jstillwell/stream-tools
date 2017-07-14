@@ -40,6 +40,7 @@ namespace stream_tools
             loggerFactory.AddDebug();
 
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }

@@ -12,34 +12,16 @@ namespace stream_tools.Controllers {
         public SocialController(StreamTools.IViewRenderService viewRenderService) {
             _viewRenderService = viewRenderService;
         }
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get() {
-            return new string[] { "value1", "value2" };
-        }
 
         // GET api/values/5
         [HttpGet("{twitter}/{youtube}")]
         public async Task<ActionResult> Get(string twitter = "", string youtube = "") {
+            //TODO: connect this to users and a DB of some kind so that we can have multiple users and they can customize the look and which elements show.
             var model = new Social { Twitter = twitter, YouTube = youtube, Facebook = "" };
             var content = await _viewRenderService.RenderToStringAsync("Social", model);
 
             return Content(content, "text/html");
         }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value) {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value) {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id) {
-        }
+        
     }
 }
