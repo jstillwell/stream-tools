@@ -11,6 +11,7 @@ namespace StreamTools.Controllers
     [Route("api/Users")]
     public class UsersController : Controller
     {
+        [HttpGet]
         public ActionResult Create() {
 
             return Content("");

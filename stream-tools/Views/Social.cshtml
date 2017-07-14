@@ -46,12 +46,12 @@
 <body>
     <div class="social-wrapper">
         @if (!string.IsNullOrWhiteSpace(Model.Twitter)) {
-            <a href=@twitter class="twitter-link" target="_blank">
+            <a href="@twitter" class="twitter-link" target="_blank">
                 <i class="fa fa-2x fa-twitter"></i>
             </a>
         }
         @if (!string.IsNullOrWhiteSpace(Model.YouTube)) {
-            <a href=@youtube class="youtube-link" target="_blank">
+            <a href="@youtube" class="youtube-link" target="_blank">
                 <i class="fa fa-2x fa-youtube"></i>
             </a>
         }

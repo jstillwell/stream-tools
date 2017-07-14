@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace StreamTools.Controllers
 {
+    /// <summary>
+    /// Creates vehicle overlays
+    /// </summary>
     [Produces("application/json")]
     [Route("api/Vehicle")]
     public class VehicleController : Controller
@@ -16,7 +19,10 @@ namespace StreamTools.Controllers
             _viewRenderService = viewRenderService;
         }
 
-        // GET api/values/5
+        /// <summary>
+        /// Get a vehicle
+        /// </summary>
+        /// <returns>Right now just returns HTML with a Vespa and a transparent background</returns>
         [HttpGet]
         public async Task<ActionResult> Get() {
             //TODO: connect this to users and a DB of some kind so that we can have multiple users and they can customize the look and which elements show.
