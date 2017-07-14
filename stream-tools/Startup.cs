@@ -29,6 +29,8 @@ namespace stream_tools
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddScoped<StreamTools.IViewRenderService, StreamTools.ViewRenderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,61 @@
+@model StreamTools.Models.Social
+
+@{
+    Layout = null;
+    var twitter = $"https://www.twitter.com/{Model.Twitter}";
+    var youtube = $"https://www.youtube.com/channel/{Model.YouTube}";
+    var facebook = $"https://www.facebook.com/{Model.Facebook}";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        html {
+            background-color: whitesmoke;
+        }
+        .social-wrapper{
+            width:100%;
+            margin:6px;
+        }
+        /* unvisited link */
+        a:link {
+            text-decoration: none;
+            color: green;
+        }
+
+        /* visited link */
+        a:visited {
+            color: darkgreen;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: darkgreen;
+        }
+
+        /* selected link */
+        a:active {
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="social-wrapper">
+        @if (!string.IsNullOrWhiteSpace(Model.Twitter)) {
+            <a href=@twitter class="twitter-link" target="_blank">
+                <i class="fa fa-2x fa-twitter"></i>
+            </a>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.YouTube)) {
+            <a href=@youtube class="youtube-link" target="_blank">
+                <i class="fa fa-2x fa-youtube"></i>
+            </a>
+        }
+
+    </div>
+</body>
+</html>

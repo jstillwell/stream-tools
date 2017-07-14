@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stream-tools", "stream-tools\stream-tools.csproj", "{D9D02123-E315-45AE-9C50-D09445BFE259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamTools", "stream-tools\StreamTools.csproj", "{D9D02123-E315-45AE-9C50-D09445BFE259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
